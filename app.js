@@ -43,7 +43,15 @@ function sortearAmigo() {
     let indice = Math.floor(Math.random() * amigos.length);
     let sorteado = amigos[indice];
 
+    // limpa completamente o array
+    amigos = [];
+
+    // remove todos os nomes da lista na tela
+    atualizarLista();
+
     // exibe o resultado
     let resultado = document.getElementById("resultado");
     resultado.innerHTML = `<li>🎉 O amigo secreto sorteado é: <strong>${sorteado}</strong> 🎉</li>`;
 }
+
+
